@@ -18,7 +18,7 @@ class RubiksCubeSolver:
             self.cube.apply_move(move)
 
     def solve_white_cross(self):
-        print("\nℹ️ Solving bulletproof white cross")
+        print("\n Solving bulletproof white cross")
         target_edges = [
             # face, center color, D-layer position (goal), D-layer position (actual)
             ('F', 'F', (0, 1), (0, 1)),
@@ -76,7 +76,7 @@ class RubiksCubeSolver:
                     while self.cube.faces[face][2][1] != self.cube.faces[face][1][1]:
                         self.apply_moves(['D'])
                     break
-        print('✅ White cross complete')
+        print(' White cross complete')
 
     def solve_white_corners(self):
         print("ℹ️ Solving bulletproof white corners")
@@ -121,10 +121,10 @@ class RubiksCubeSolver:
                     self.apply_moves(['U'])
                 if found:
                     break
-        print("✅ White corners complete")
+        print("White corners complete")
 
     def solve_middle_layer(self):
-        print("ℹ️ Solving middle layer")
+        print(" Solving middle layer")
 
         def is_middle_layer_solved():
             # Check if middle layer edges are aligned properly
@@ -151,11 +151,11 @@ class RubiksCubeSolver:
                     self.apply_moves(["U"])
 
             if is_middle_layer_solved():
-                print("✅ Middle layer complete")
+                print(" Middle layer complete")
                 return
             attempts += 1
 
-        print("⚠️ Middle layer — still incomplete after fix")
+        print(" Middle layer — still incomplete after fix")
 
 
 
@@ -180,7 +180,7 @@ class RubiksCubeSolver:
 
 
     def solve_yellow_cross(self):
-        print("ℹ️ Advanced yellow cross phase")
+        print(" Advanced yellow cross phase")
 
         def get_yellow_edges():
             u = self.cube.faces['U']
@@ -203,18 +203,17 @@ class RubiksCubeSolver:
             else:  # Dot case
                 self.apply_moves(["F", "R", "U", "R'", "U'", "F'"])
 
-        print("✅ Yellow cross complete")
-
+        print(" Yellow cross complete")
           
 
 
     def position_yellow_corners(self):
-        print("ℹ️ Yellow corner positioning")
+        print(" Yellow corner positioning")
         self.apply_moves(["U", "R", "U'", "L'", "U", "R'", "U'", "L"])
-        print("✅ Yellow corners positioned")
+        print(" Yellow corners positioned")
 
     def orient_yellow_corners(self):
-        print("ℹ️ Orienting yellow corners")
+        print(" Orienting yellow corners")
         attempts = 0
 
         def all_oriented():
@@ -233,9 +232,9 @@ class RubiksCubeSolver:
             attempts += 1
 
         if all_oriented():
-            print("✅ Yellow corner orientation complete")
+            print(" Yellow corner orientation complete")
         else:
-            print("⚠️ Yellow corner orientation — failed")
+            print(" Yellow corner orientation — failed")
 
 
 
@@ -245,7 +244,7 @@ class RubiksCubeSolver:
 
 
     def final_edge_permutation(self):
-        print("ℹ️ Final edge positioning")
+        print(" Final edge positioning")
         for _ in range(4):
             front = self.cube.faces['F'][1][1]
             right = self.cube.faces['R'][1][1]
@@ -257,11 +256,11 @@ class RubiksCubeSolver:
         self.apply_moves(["R", "U", "R'", "U", "R", "U2", "R'", "U"])
         self.apply_moves(["R'", "F", "R'", "B2", "R", "F'", "R'", "B2", "R2"])
 
-        print("✅ Final edge positioning complete")
+        print("Final edge positioning complete")
 
 
     def solve(self):
-        print(f"ℹ️ Scramble — {' '.join(self.scramble)}")
+        print(f" Scramble — {' '.join(self.scramble)}")
         self.apply_moves(self.scramble)
         self.solve_white_cross()
         self.solve_white_corners()
@@ -272,14 +271,14 @@ class RubiksCubeSolver:
         self.final_edge_permutation()
         
 
-        print("\n🧩 Final Solution Moves:")
+        print("\n Final Solution Moves:")
         print(" ".join(self.solution_moves))
-        print("\n📦 Final Cube State:")
+        print("\n Final Cube State:")
         print_cube_state(self.cube)
         if is_solved(self.cube):
-            print("\n✅ Cube Solved")
+            print("\n Cube Solved")
         else:
-            print("\n❌ Cube Not Solved")
+            print("\n Cube Not Solved")
 if __name__ == '__main__':
     start = timer_start()
     solver = RubiksCubeSolver()  # Still works — no cube passed
