@@ -66,7 +66,7 @@ The final solved cube’s top face is shown using emoji mapping
 
 ## 📸 App Screenshot
 
-![Rubik's Cube Solver UI](Screenshot.png)
+![Rubik's Cube Solver UI](https://github.com/gautamMohit2022/rubiks-cube-solver/blob/main/Screenshot%20.png)
 
 
 License
@@ -75,6 +75,7 @@ MIT License — feel free to use, fork, or build upon it.
 Author
 Mohit Gautam
 Hackathon: AeroHack Design Challenge 2025
+
 
 
 
