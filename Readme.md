@@ -64,6 +64,9 @@ The full move sequence is displayed
 
 The final solved cube’s top face is shown using emoji mapping
 
+## 📸 App Screenshot
+
+![Rubik's Cube Solver UI](screenshot.png)
 
 
 License
@@ -72,6 +75,7 @@ MIT License — feel free to use, fork, or build upon it.
 Author
 Mohit Gautam
 Hackathon: AeroHack Design Challenge 2025
+
 
 
 
