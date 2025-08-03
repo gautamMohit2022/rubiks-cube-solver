@@ -19,7 +19,6 @@ This project solves a 3x3 Rubik’s Cube using a custom Python solver and provid
 
 ```text
 U R2 F B R B2 R U2 L B2 R2 U' D' R2 F R' L B2 U2 F2
-<img width="1484" height="826" alt="Screenshot 2025-08-03 142302" src="https://github.com/user-attachments/assets/83c1aa0d-28af-4fe7-8d9a-cef5b9c37294" />
 #Tech Stack
 Python 3
 
@@ -64,7 +63,7 @@ The RubiksCubeSolver class solves the cube step-by-step
 The full move sequence is displayed
 
 The final solved cube’s top face is shown using emoji mapping
-<img width="1484" height="826" alt="Screenshot 2025-08-03 142302" src="https://github.com/user-attachments/assets/0b47d09a-96ee-45c1-af87-40223cad6ad4" />
+
 
 
 License
@@ -73,5 +72,6 @@ MIT License — feel free to use, fork, or build upon it.
 Author
 Mohit Gautam
 Hackathon: AeroHack Design Challenge 2025
+
 
 
